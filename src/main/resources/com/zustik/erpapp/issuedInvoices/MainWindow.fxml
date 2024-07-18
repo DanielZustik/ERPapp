@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainBorderPane" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zustik.erpapp.ControllersPresentation.MainWindowControllerIssuedInvoices">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Home">
+                </Menu>
+                <Menu text="Settings">
+                    <items>
+                        <MenuItem onAction="#addItemDialog" text="New" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit" />
+                    </items>
+                </Menu>
+                <Menu text="About">
+                    <items>
+                        <MenuItem onAction="#addItemDialog" text="New" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit" />
+                    </items>
+                </Menu>
+            </MenuBar>
+            <HBox>
+                <TabPane fx:id="tabPane" prefHeight="29.0" prefWidth="1024" tabClosingPolicy="UNAVAILABLE" tabMinWidth="80.0">
+                    <tabs>
+                        <Tab fx:id="tabPaneIssuedInv" text="Issued invoices">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneReceivedInv" text="Received invoices">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneAssets" text="Assets">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneEmployees" text="Employees">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneFinancialInfo" text="Financial info">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneCashFlow" text="Cash flow">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Blend />
+               </effect>
+                </TabPane>
+            </HBox>
+        </VBox>
+
+<!--        <Label fx:id="welcomeText" text="Hello! Welcome to my ERP app"  style="-fx-font-family: 'Times New Roman'; -fx-font-weight: bold;"/>-->
+    </top>
+    <center>
+<!--        <ListView fx:id="itemsView" onMouseClicked="#handleClickListView">-->
+<!--        </ListView>-->
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="invoiceNumber" prefWidth="38" text="Inv. #">
+                </TableColumn>
+                <TableColumn fx:id="issueDate" prefWidth="55" text="Issue date">
+                </TableColumn>
+                <TableColumn fx:id="totalAmount" text="Total amount">
+                </TableColumn>
+                <TableColumn fx:id="amountDue" text="Due amount">
+                </TableColumn>
+                <TableColumn fx:id="dueDate" prefWidth="55" text="Due date">
+                </TableColumn>
+                <TableColumn fx:id="recipient" prefWidth="100" text="Recipient">
+                </TableColumn>
+                <TableColumn fx:id="subject" prefWidth="100" text="Subject">
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox prefHeight="40" spacing="5" VBox.vgrow="ALWAYS" alignment="CENTER_LEFT">
+            <padding>
+                <Insets bottom="7" left="7" right="7" top="7" />
+            </padding>
+            <Button onAction="#addItemDialog" prefWidth="80" text="Add" />
+            <Button onAction="#editItemDialog" prefWidth="80" text="Edit" />
+            <Button onAction="#copyItem" prefWidth="80" text="Copy" />
+            <Button onAction="#removeItem" prefWidth="80" text="Remove" />
+            <Button onAction="#filterItems" prefWidth="80" text="Filter" />
+            <Button fx:id="clearFilterBtn" disable="true" mnemonicParsing="false" onAction="#clearFilter" prefWidth="80" text="Clear filter" />
+             <Label fx:id="activeFilterInfoLabel" text="Label" visible="false">
+                <font>
+                   <Font name="System Italic" size="10.0" />
+                </font>
+             </Label>
+        </HBox>
+    </bottom>
+</BorderPane>

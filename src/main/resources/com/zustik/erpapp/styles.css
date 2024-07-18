@@ -1,0 +1,21 @@
+.redBackground {
+    -fx-background-color: red;
+}
+
+.redBorder {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+}
+
+.border-box {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+}
+.radio-button {
+    -fx-padding: 4px 10px 0 0; /* Right padding on each radio button */
+}
+#terminationDateLabel {
+    -fx-padding: 4px 5px 0 5px; /* Right padding on each radio button */
+}
+

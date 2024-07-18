@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<BorderPane fx:id="mainBorderPane" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zustik.erpapp.ControllersPresentation.MainWindowControllerCashFlow">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Home">
+                </Menu>
+                <Menu text="Settings">
+                    <items>
+<!--                        <MenuItem onAction="#addItemDialog" text="New" />-->
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit" />
+                    </items>
+                </Menu>
+                <Menu text="About">
+                    <items>
+<!--                        <MenuItem onAction="#addItemDialog" text="New" />-->
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit" />
+                    </items>
+                </Menu>
+            </MenuBar>
+            <HBox>
+                <TabPane fx:id="tabPane" prefHeight="29.0" prefWidth="1024" tabClosingPolicy="UNAVAILABLE" tabMinWidth="80.0">
+                    <tabs>
+                        <Tab fx:id="tabPaneIssuedInv" text="Issued invoices">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneReceivedInv" text="Received invoices">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneAssets" text="Assets">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneEmployees" text="Employees">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneFinancialInfo" text="Financial info">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneCashFlow" text="Cash flow">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Blend />
+               </effect>
+                </TabPane>
+            </HBox>
+        </VBox>
+
+<!--        <Label fx:id="welcomeText" text="Hello! Welcome to my ERP app"  style="-fx-font-family: 'Times New Roman'; -fx-font-weight: bold;"/>-->
+    </top>
+    <center>
+<!--        <ListView fx:id="itemsView" onMouseClicked="#handleClickListView">-->
+<!--        </ListView>-->
+        <VBox>
+            <TableView fx:id="tableView" prefHeight="350">
+                <columns>
+                    <TableColumn fx:id="date" prefWidth="35" text="Date">
+                    </TableColumn>
+                    <TableColumn fx:id="invoiceIncomes" prefWidth="40" text="Invoice Incomes">
+                    </TableColumn>
+                    <TableColumn fx:id="otherIncomes" prefWidth="40" text="Other Incomes">
+                    </TableColumn>
+                    <TableColumn fx:id="invoiceExpenses" prefWidth="40" text="Invoice Expenses">
+                    </TableColumn>
+                    <TableColumn fx:id="personalExpenses" prefWidth="40" text="Personal Expenses">
+                    </TableColumn>
+                    <TableColumn fx:id="otherExpenses" prefWidth="40" text="Other Expenses">
+                    </TableColumn>
+                    <TableColumn fx:id="sum" text="Sum">
+                    </TableColumn>
+                    <TableColumn fx:id="balance" text="Balance">
+                    </TableColumn>
+                </columns>
+            </TableView>
+            <HBox prefHeight="40" spacing="5" VBox.vgrow="ALWAYS" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets bottom="7" left="7" right="7" top="7" />
+                </padding>
+                <Button  prefWidth="110" text="Filter" />
+                <Button fx:id="clearFilterBtn" disable="true" mnemonicParsing="false" onAction="#clearFilter" prefWidth="110" text="Clear filter" />
+                <Label fx:id="activeFilterInfoLabel" text="Label" visible="false">
+                    <font>
+                        <Font name="System Italic" size="10.0" />
+                    </font>
+                </Label>
+            </HBox>
+<!--            <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="AS_NEEDED">-->
+                <LineChart fx:id="lineChart">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" label="Days of the Year"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" label="Kč"/>
+                    </yAxis>
+                </LineChart>
+<!--            </ScrollPane>-->
+        </VBox>
+
+    </center>
+    <bottom>
+
+    </bottom>
+</BorderPane>

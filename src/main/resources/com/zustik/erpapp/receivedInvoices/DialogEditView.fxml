@@ -1,0 +1,36 @@
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.zustik.erpapp.ControllersPresentation.InvoicesDialogEditController" stylesheets="@../styles.css">
+    <headerText>
+        Change details of the invoice.
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Invoice number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="invoiceNumberField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Receipt date:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="isssueDateField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Total amount:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="totalAmountField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Due amount:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="dueAmountField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="Due date:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dueDatePicker" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="Supplier:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextField fx:id="recipientField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            <Label text="Subject:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <TextField fx:id="subjectField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            <Label text="Project number:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <TextField fx:id="projectNumberField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+            <Label text="Project manager:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+            <TextField fx:id="projectManagerField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+            <Label text="Note:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+            <TextArea fx:id="noteField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

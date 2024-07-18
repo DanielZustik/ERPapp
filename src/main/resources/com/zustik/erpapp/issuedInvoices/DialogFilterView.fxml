@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane prefHeight="180.0" prefWidth="317.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zustik.erpapp.ControllersPresentation.DialogFilterController">
+    <content>
+        <GridPane fx:id="filterDialogGridPane" hgap="10" vgap="10">
+            <Label text="Filter by:" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ChoiceBox fx:id="filterByChoice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="0"
+            onAction="#choiceBoxSelection"/>
+            <Label text="Equals to: " textAlignment="CENTER" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldEquals" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="datePickEquals" disable="true" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="From:" textAlignment="CENTER" GridPane.rowIndex="3" />
+            <Label text="To:" GridPane.rowIndex="5" />
+            <TextField fx:id="textFieldFrom" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="textFieldTo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="datePickFrom" disable="true" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="datePickTo" disable="true" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Slider fx:id="sliderFrom" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Slider fx:id="sliderTo" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+<!--            <Label text="Issue date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />-->
+<!--            <DatePicker fx:id="isssueDateField" GridPane.columnIndex="1" GridPane.rowIndex="1" />-->
+<!--            <Label text="Total amount:" GridPane.columnIndex="0" GridPane.rowIndex="2" />-->
+<!--            <TextField fx:id="totalAmountField" GridPane.columnIndex="1" GridPane.rowIndex="2" />-->
+<!--            <Label text="Due amount:" GridPane.columnIndex="0" GridPane.rowIndex="3" />-->
+<!--            <TextField fx:id="dueAmountField" GridPane.columnIndex="1" GridPane.rowIndex="3" />-->
+<!--            <Label text="Due date:" GridPane.columnIndex="0" GridPane.rowIndex="4" />-->
+<!--            <DatePicker fx:id="dueDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />-->
+<!--            <Label text="Recipient:" GridPane.columnIndex="0" GridPane.rowIndex="5" />-->
+<!--            <TextField fx:id="recipientField" GridPane.columnIndex="1" GridPane.rowIndex="5" />-->
+<!--            <Label text="Subject:" GridPane.columnIndex="0" GridPane.rowIndex="6" />-->
+<!--            <TextField fx:id="subjectField" GridPane.columnIndex="1" GridPane.rowIndex="6" />-->
+<!--            <Label text="Project number:" GridPane.columnIndex="0" GridPane.rowIndex="7" />-->
+<!--            <TextField fx:id="projectNumberField" GridPane.columnIndex="1" GridPane.rowIndex="7" />-->
+<!--            <Label text="Project manager:" GridPane.columnIndex="0" GridPane.rowIndex="8" />-->
+<!--            <TextField fx:id="projectManagerField" GridPane.columnIndex="1" GridPane.rowIndex="8" />-->
+<!--            <Label text="Note:" GridPane.columnIndex="0" GridPane.rowIndex="9" />-->
+<!--            <TextArea fx:id="noteField" GridPane.columnIndex="1" GridPane.rowIndex="9" />-->
+<!--            <Label fx:id="notEnoughInfoLabel" alignment="CENTER" textAlignment="CENTER" textFill="#ed2a07" GridPane.columnIndex="0" GridPane.rowIndex="10" />-->
+<!--            <columnConstraints>-->
+<!--                <ColumnConstraints maxWidth="95.0" minWidth="95.0" prefWidth="95.0" />-->
+<!--                <ColumnConstraints maxWidth="474.33333333333326" minWidth="474.33333333333326" prefWidth="474.33333333333326" />-->
+<!--            </columnConstraints>-->
+<!--            <rowConstraints>-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--                <RowConstraints />-->
+<!--            </rowConstraints>-->
+        </GridPane>
+    </content>
+</DialogPane>

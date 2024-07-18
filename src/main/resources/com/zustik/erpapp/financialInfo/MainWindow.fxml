@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="mainBorderPane" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zustik.erpapp.ControllersPresentation.MainWindowControllerFinancialInfo">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Home">
+                </Menu>
+                <Menu text="Settings">
+                    <items>
+                        <MenuItem text="New" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit" />
+                    </items>
+                </Menu>
+                <Menu text="About">
+                    <items>
+                        <MenuItem text="New" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit" />
+                    </items>
+                </Menu>
+            </MenuBar>
+            <HBox>
+                <TabPane fx:id="tabPane" prefHeight="29.0" prefWidth="1024" tabClosingPolicy="UNAVAILABLE" tabMinWidth="80.0">
+                    <tabs>
+                        <Tab fx:id="tabPaneIssuedInv" text="Issued invoices">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneReceivedInv" text="Received invoices">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneAssets" text="Assets">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneEmployees" text="Employees">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneFinancialInfo" text="Financial info">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabPaneCashFlow" text="Cash flow">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="220.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Blend />
+               </effect>
+                </TabPane>
+            </HBox>
+            <ToolBar>
+                <!--kdyz je male pismeno na zacatku, jde o property, kdyz velke, jde o classu... tooltip je property, ncimene chce do sebe classu, proto je nutne ho definovat tagem a ne primo v byttton tagu&ndash;&gt;-->
+                <HBox spacing="4" alignment="CENTER" HBox.hgrow="ALWAYS" >
+                    <padding>
+                        <Insets bottom="5" left="20" right="20" top="5" />
+                    </padding>
+                    <Label alignment="CENTER_LEFT">Type of statement: </Label>
+                    <ComboBox fx:id="comboBoxTypeOfStatement" layoutY="-2.0" prefWidth="125.0">
+                        <HBox.margin>
+                            <Insets right="13" />
+                        </HBox.margin>
+                    </ComboBox>
+                    <Label alignment="CENTER"> Period: </Label>
+                    <ComboBox  fx:id="comboBoxPeriod" layoutY="-2.0" prefWidth="85.0" onAction="#actionOnComboBox"/>
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane hbarPolicy="NEVER">
+            <VBox>
+                <HBox>
+                    <HBox spacing="4" alignment="CENTER_LEFT" prefWidth="550">
+
+                    </HBox>
+                    <VBox prefWidth="400"></VBox>
+                </HBox>
+                <Separator></Separator>
+                <HBox prefHeight="450">
+                    <padding>
+                        <Insets bottom="10" left="20" right="20" top="10" />
+                    </padding>
+                    <VBox alignment="TOP_CENTER" spacing="5">
+                        <TableView fx:id="tableView" prefWidth="550">
+                            <columns>
+                                <TableColumn fx:id="rowLabel" prefWidth="38">
+                                </TableColumn>
+                                <TableColumn fx:id="amount" prefWidth="55" text="amount (tis. CZK)">
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                    <VBox>
+                        <padding>
+                            <Insets bottom="10" left="20" right="10" />
+                        </padding>
+                        <VBox>
+                            <HBox alignment="BOTTOM_CENTER" prefHeight="19">
+                                <Label>Composition of items in the profit and loss statement </Label>
+                            </HBox>
+                            <HBox alignment="BOTTOM_CENTER" prefHeight="28">
+                                <ComboBox fx:id="comboBoxPieChart" layoutY="-2.0" prefWidth="150.0" onAction="#actionOnComboBox" >
+                                </ComboBox>
+                            </HBox>
+                        </VBox>
+                        <PieChart fx:id="pieChart" prefWidth="400" />
+                    </VBox>
+            </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

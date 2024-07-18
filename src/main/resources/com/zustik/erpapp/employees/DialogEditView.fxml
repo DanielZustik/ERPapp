@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<DialogPane stylesheets="@../styles.css" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.zustik.erpapp.ControllersPresentation.EmployeesDialogEditController">
+    <headerText>
+        Change employee info.
+    </headerText>
+    <content>
+        <ScrollPane hbarPolicy="NEVER">
+<!--            <content>-->
+                <GridPane hgap="10" vgap="10" prefHeight="420" prefWidth="630">
+                    <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField disable="true" fx:id="ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="First name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="firstName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Last name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label text="Degree:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <ChoiceBox fx:id="degree" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <Label text="Hire date:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <DatePicker fx:id="hireDate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Label text="Active Status:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <RadioButton fx:id="activeStatusYes" text="Yes"/>
+                        <RadioButton fx:id="activeStatusNo"  text="No"/>
+                        <Label fx:id="terminationDateLabel" id="terminationDateLabel" visible="false" >Inactive from:</Label>
+                        <DatePicker fx:id="terminationDate" visible="false" disable="true"/>
+                    </HBox>
+
+                    <Label text="Contract type:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                    <ChoiceBox fx:id="contractType" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <Label text="Department:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                    <TextField fx:id="department" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                    <Label text="Gross wage:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                    <TextField fx:id="grossWage" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                    <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                    <TextArea fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+                    <Label text="Bank account num.:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                    <TextField fx:id="bankAccNum" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+                    <Label text="Marital status:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+                    <ChoiceBox fx:id="maritalStatus" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+                    <Label text="Number of children:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+                    <TextField fx:id="numberOfChildren" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+
+                    <Label text="Highest education completed:" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+                    <ChoiceBox fx:id="highestEducationCompleted" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+<!--                    <columnConstraints>-->
+<!--                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10" />-->
+<!--                        <ColumnConstraints hgrow="ALWAYS" minWidth="100" />-->
+<!--                    </columnConstraints>-->
+<!--                    <rowConstraints>-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                        <RowConstraints vgrow="SOMETIMES" minHeight="10" />-->
+<!--                    </rowConstraints>-->
+                </GridPane>
+<!--            </content>-->
+        </ScrollPane>
+    </content>
+</DialogPane>

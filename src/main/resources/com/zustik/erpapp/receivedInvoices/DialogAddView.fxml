@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.zustik.erpapp.ControllersPresentation.InvoicesDialogAddController">
+    <headerText>
+        Please provide details of the new invoice.
+    </headerText>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Invoice number:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="invoiceNumberField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Receipt date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <DatePicker fx:id="isssueDateField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Total amount:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="totalAmountField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Due amount:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="dueAmountField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Due date:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <DatePicker fx:id="dueDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Supplier:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="recipientField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Subject:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="subjectField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Project number:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <TextField fx:id="projectNumberField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="Project manager:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <TextField fx:id="projectManagerField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="Note:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <TextArea fx:id="noteField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="notEnoughInfoLabel" alignment="CENTER" textAlignment="CENTER" textFill="#ed2a07" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+</DialogPane>
